@@ -28,14 +28,11 @@ void main() {
 	imshow("initial", srcImg);
 
 	namedWindow("process", 1);
-	process();
-	imshow("process", dstImg1);
-
 	createTrackbar("erode/dilate", "process", &flag, 1, onselectvalue);
-	//onselectvalue(flag,0);
+	onselectvalue(flag,0);
 
 	createTrackbar("coresize", "process", &coresize, 40, oncorevalue);
-	//oncorevalue(coresize,0);
+	oncorevalue(coresize,0);
 	waitKey();
 }
 void process() {
